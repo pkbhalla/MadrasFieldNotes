@@ -6,29 +6,23 @@ env.useBrowserCache = true;
 let generator: any = null;
 
 self.onmessage = async (e: MessageEvent) => {
-  const { type, model, messages, systemPrompt } = e.data;
+  const { type, messages, systemPrompt } = e.data;
 
   if (type === 'init') {
     try {
-      const firstModel = model || 'onnx-community/gemma-3-1b-it-ONNX';
       generator = await pipeline(
         'text-generation',
-        firstModel,
-        { device: 'cpu' as any }
+        'onnx-community/Qwen2.5-0.5B-Instruct',
+        {
+          device: 'wasm',
+          dtype: 'q4',
+          progress_callback: (p: any) =>
+            self.postMessage({ type: 'progress', progress: p })
+        }
       );
-      self.postMessage({ type: 'init', success: true, fallback: 'cpu', model: firstModel });
+      self.postMessage({ type: 'init', success: true, model: 'Qwen2.5-0.5B-Instruct-q4' });
     } catch (err) {
-      try {
-        const fallbackModel = 'onnx-community/Qwen2.5-0.5B-Instruct';
-        generator = await pipeline(
-          'text-generation',
-          fallbackModel,
-          { device: 'cpu' as any }
-        );
-        self.postMessage({ type: 'init', success: true, fallback: 'cpu', model: fallbackModel });
-      } catch (err2) {
-        self.postMessage({ type: 'init', success: false, error: err2 });
-      }
+      self.postMessage({ type: 'init', success: false, error: String(err) });
     }
   } else if (type === 'generate' && generator) {
     try {
@@ -40,7 +34,7 @@ self.onmessage = async (e: MessageEvent) => {
       });
       self.postMessage({ type: 'result', result });
     } catch (err) {
-      self.postMessage({ type: 'error', error: err });
+      self.postMessage({ type: 'error', error: String(err) });
     }
   }
 };
