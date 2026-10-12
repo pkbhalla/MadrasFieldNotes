@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#e8f5e9"/>
+  <!-- Branch -->
+  <path d="M 50 310 Q 200 320 350 290" stroke="#5d4037" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- Parakeet Long Tail -->
+  <path d="M 180 260 L 150 390 L 170 390 L 195 260 Z" fill="#2e7d32"/>
+  <!-- Parakeet Body -->
+  <ellipse cx="200" cy="220" rx="45" ry="65" fill="#43a047"/>
+  <!-- Wing -->
+  <path d="M 175 190 Q 155 250 185 280 Q 200 240 190 190 Z" fill="#2e7d32"/>
+  <!-- Neck Ring (Rose-ringed parakeet characteristic) -->
+  <path d="M 180 168 Q 205 178 222 165" stroke="#e91e63" stroke-width="5" fill="none"/>
+  <path d="M 180 172 Q 205 182 222 169" stroke="#212121" stroke-width="2.5" fill="none"/>
+  <!-- Head -->
+  <circle cx="205" cy="145" r="32" fill="#66bb6a"/>
+  <!-- Eye -->
+  <circle cx="215" cy="140" r="5" fill="#fff59d"/>
+  <circle cx="215" cy="140" r="2.5" fill="#212121"/>
+  <!-- Red Curved Beak -->
+  <path d="M 230 138 Q 255 145 245 162 Q 232 158 228 152 Z" fill="#d32f2f"/>
+  <path d="M 230 152 Q 242 158 238 165 Q 228 160 228 152 Z" fill="#b71c1c"/>
+  <text x="200" y="38" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1b5e20">Rose-ringed Parakeet (நெலக்கிளி)</text>
+</svg>

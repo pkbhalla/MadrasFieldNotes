@@ -1,0 +1,362 @@
+[
+  {
+    "id": "common-myna",
+    "commonNameEn": "Common Myna",
+    "commonNameTa": "சாத்தைக்குருவி",
+    "scientificName": "Acridotheres tristis",
+    "type": "bird",
+    "factsEn": [
+      "Bold brown bird with a yellow beak and bare yellow skin around the eye",
+      "Very common on IIT Madras lawns and city parks, usually in noisy groups",
+      "Sings a wide range of calls and can mimic other birds"
+    ],
+    "factsTa": [
+      "மஞ்சள் நிற வால் கொண்ட பழுப்பு நிற பறவை; கண் சுற்று மஞ்சள் தோல்",
+      "ஐஐடிஎம் பருக்களிலும் பூங்காக்களிலும் குழுவாக ஒலிப்படையாகக் காணப்படும்",
+      "பல்வகையான குரல்கள் பாடுகிறது; மற்ற பறவைகளின் குரலையும் போலிக்கலாம்"
+    ],
+    "safetyNoteEn": "Wild bird — watch from a distance and never feed it processed food.",
+    "safetyNoteTa": "வேலைப்பறவை — தூரத்தில் பார்த்து, சுற்றுப்பழுக்கமான உணவைக் கொடுக்காதேன்.",
+    "identifyingFeatures": [
+      "brown bird with yellow beak",
+      "bird with yellow patch around eye",
+      "myna bird standing on grass"
+    ]
+  },
+  {
+    "id": "rose-ringed-parakeet",
+    "commonNameEn": "Rose-ringed Parakeet",
+    "commonNameTa": "நெலக்கிளி",
+    "scientificName": "Psittacula krameri",
+    "type": "bird",
+    "factsEn": [
+      "Bright green parrot with a very long tail and a red beak",
+      "Males show a rose-pink ring around the neck",
+      "Common on campus, nesting in tree holes; loud screeching calls"
+    ],
+    "factsTa": [
+      "மிக நீளமான வால் கொண்ட பச்சை நிற கிளி; சிவப்பு வால்",
+      "ஆண் கிளிகளில் கழுத்துச் சுற்று இளஞ்சிவப்பு வளையம்",
+      "மரம் குழிகளில் பூண்டு வசிக்கும்; கடுமையான குரல்"
+    ],
+    "safetyNoteEn": "Protected wild bird — observe only; never cage or hand-feed it.",
+    "safetyNoteTa": "காவல்தனமான கிளி — பார்த்து மட்டும்; கட்டியோ கையில் கொடுத்தோ வேண்டாம்.",
+    "identifyingFeatures": [
+      "green parrot with long tail and red beak",
+      "green bird with pink ring around neck",
+      "parakeet perched on tree branch"
+    ]
+  },
+  {
+    "id": "spotted-dove",
+    "commonNameEn": "Spotted Dove",
+    "commonNameTa": "நத்தைப் பருந்தோட்டி",
+    "scientificName": "Spilopelia chinensis",
+    "type": "bird",
+    "factsEn": [
+      "Small grey-brown dove with a black neck patch marked with white spots",
+      "Soft cooing calls, usually seen in pairs on the ground",
+      "Feeds on fallen seeds and grain around campus"
+    ],
+    "factsTa": [
+      "கழுத்தில் வெள்ளைப் புள்ளிகள் கொண்ட கருப்புப் பரப்பான சிறு பருந்தோட்டி",
+      "மெல்ல ஜூஜு குரல்; ஜோடியாக நிலத்தில் காணப்படும்",
+      "விழுந்த விதைகளையும் தாண்டியையும் உண்கிறது"
+    ],
+    "safetyNoteEn": "Shy bird — keep your distance; free-ranging dogs often chase them.",
+    "safetyNoteTa": "அதிரடியான பறவை — தூரமாகக் காணுங்கள்; நாய்கள் அடுக்கும்.",
+    "identifyingFeatures": [
+      "small grey dove with spotted neck patch",
+      "dove walking on the ground",
+      "brown grey bird with black neck spots"
+    ]
+  },
+  {
+    "id": "house-crow",
+    "commonNameEn": "House Crow",
+    "commonNameTa": "நாட்டுக்காகா",
+    "scientificName": "Corvus splendens",
+    "type": "bird",
+    "factsEn": [
+      "Glossy black crow with a grey neck and breast",
+      "Highly intelligent, noisy, and common near canteens and dustbins",
+      "Known to drop hard nuts on roads to crack them open"
+    ],
+    "factsTa": [
+      "சாம்பல் நிற கழுத்தும் நெற்றியும் கொண்ட கருப்பு காகா",
+      "மிகவும் புத்திசாலியானது; கண்டீன் மற்றும் சுவருக்களுக்கு அருகில் காணப்படும்",
+      "கொட்டைகளை வீசி உடைத்துக் காய்ச்சுகிறது"
+    ],
+    "safetyNoteEn": "Bold and curious — guard open food and small loose objects.",
+    "safetyNoteTa": "தீவிரமானதும் ஆர்வமானதும் — திறந்த உணவையும் சிறு பொருட்களையும் காக்குங்கள்.",
+    "identifyingFeatures": [
+      "black crow with grey neck",
+      "crow near garbage or dustbin",
+      "large glossy black bird"
+    ]
+  },
+  {
+    "id": "white-throated-kingfisher",
+    "commonNameEn": "White-throated Kingfisher",
+    "commonNameTa": "வெள்ளைத் தொண்டை நீலம்பொருவி",
+    "scientificName": "Halcyon smyrnensis",
+    "type": "bird",
+    "factsEn": [
+      "Striking bird: turquoise-blue back, chocolate-brown head, white throat and breast",
+      "Often perched on wires or bushes — near water, but also far from it",
+      "Dives for small fish, frogs and large insects"
+    ],
+    "factsTa": [
+      "நீல நிற முதுகு, படுவர் தலை, வெள்ளைத் தொண்டை மற்றும் நெற்றி — கவனம் ஈர்க்கும் பறவை",
+      "விலை அம்பலங்களில் அமரும்; நீருக்கு அருகிலும் தொலைவிலும்",
+      "சிறு மீன், விலங்குகள், பெரிய பூச்சிகளை வேட்டையாடுகிறது"
+    ],
+    "safetyNoteEn": "No danger to people — enjoy the sight from a distance.",
+    "safetyNoteTa": "மனிதர்களுக்கு ஆபத்து இல்லை — தூரத்தில் ரசிக்குங்கள்.",
+    "identifyingFeatures": [
+      "kingfisher with white throat and blue back",
+      "brown and turquoise bird on a wire",
+      "stocky bird with long dagger-like beak"
+    ]
+  },
+  {
+    "id": "asian-koel",
+    "commonNameEn": "Asian Koel",
+    "commonNameTa": "கோழிக்குயில்",
+    "scientificName": "Eudynamys scolopaceus",
+    "type": "bird",
+    "factsEn": [
+      "The male is glossy black with a greenish bill; the female is brown with white spots",
+      "Famous for its loud 'ku-oo' call in summer — a sound of the Tamil month of Panguni",
+      "A brood parasite: it lays its eggs in crow nests"
+    ],
+    "factsTa": [
+      "ஆண் பறவை கருப்பு நிறமானது; பெண் பறவைக்கு படுவர் நிறமும் வெள்ளைப் புள்ளிகளும்",
+      "கோவைக் காலத்தில் 'கூ-ஊ' என்று கடுமையாகக் கூச்சடுக்கும்; பங்குனி மாதத்தின் ஒலி",
+      "காகாக்குடும்பத்தில் முட்டை வைத்து வளர்கிறது"
+    ],
+    "safetyNoteEn": "Listen more than you look — it usually hides in dense tree tops.",
+    "safetyNoteTa": "பார்வைக்கும் கேட்கவும் — அடர்ந்த மர முகட்டில் மறைந்திருக்கும்.",
+    "identifyingFeatures": [
+      "black bird with greenish beak",
+      "brown bird with white spots",
+      "cuckoo perched on tree top"
+    ]
+  },
+  {
+    "id": "neem",
+    "commonNameEn": "Neem",
+    "commonNameTa": "வேப்பம்",
+    "scientificName": "Azadirachta indica",
+    "type": "plant",
+    "factsEn": [
+      "Tall tree with feathery compound leaves, small white flowers and yellow olive-like fruits",
+      "Every part of the neem is used across India in traditional household care",
+      "Campus neem trees host koels, mynas and sunbirds"
+    ],
+    "factsTa": [
+      "கொண்டாய் இலைகள், சிறு வெள்ளைத் தூக்கள், மஞ்சள் நிறப் பழம் கொண்ட உயரமான மரம்",
+      "இந்தியாவில் வேப்பம் மரத்தின் எல்லாப் பகுதிகளும் வீட்டு வழக்கங்களில் பயன்படுத்தப்படுகின்றன",
+      "காம்பஸ் வேப்பம் மரங்களில் கோழிக்குயில், சாத்தைக்குருவி, சூரியப் பறவைகள் வருகின்றன"
+    ],
+    "safetyNoteEn": "Bitter and potent — never eat neem products as food. This app gives no medical advice.",
+    "safetyNoteTa": "கடுப்பானதும் வலுவானதும் — வேப்பத் தயாரிப்புகளை உணவாகக் கொள்ளாதேன். இந்த செயலியானது மருத்துவ ஆலோசனை கொடுக்காது.",
+    "identifyingFeatures": [
+      "neem tree with feathery green compound leaves",
+      "tree with small white flowers and yellow fruits",
+      "tall tree with many small leaflets"
+    ]
+  },
+  {
+    "id": "peepal",
+    "commonNameEn": "Peepal",
+    "commonNameTa": "அரசமரம்",
+    "scientificName": "Ficus religiosa",
+    "type": "plant",
+    "factsEn": [
+      "Large tree with distinctive heart-shaped leaves that flutter in the breeze",
+      "Sacred in Hindu and Buddhist traditions, often with a platform around the trunk",
+      "Its figs start red and ripen to purple, attracting many birds"
+    ],
+    "factsTa": [
+      "இதய வடிவ இலைகள் கொண்ட பெரிய மரம்; காற்றில் அசைந்து கடப்படும்",
+      "இந்து மற்றும் புத்த மரபுகளில் புனிதமான மரம்; தோட்டுச் சுற்று பாலாமாக இருக்கும்",
+      "பழம் சிவப்பாகத் தொடங்கி ஊதா நிறமாகப் பழிற்று பறவைகளைஈர்க்கும்"
+    ],
+    "safetyNoteEn": "Do not peel the bark or harm old sacred trees.",
+    "safetyNoteTa": "மரத்தோல் பொறி வெட்டாதேன்; பழைய புனித மரங்களுக்கு விடையில்லை.",
+    "identifyingFeatures": [
+      "tree with heart shaped leaves",
+      "large fig tree with fluttering leaves",
+      "sacred tree with stone platform around trunk"
+    ]
+  },
+  {
+    "id": "banyan",
+    "commonNameEn": "Banyan",
+    "commonNameTa": "ஆலமரம்",
+    "scientificName": "Ficus benghalensis",
+    "type": "plant",
+    "factsEn": [
+      "India's national tree; it sends down aerial roots that become new trunks",
+      "A single tree can spread over a huge area, forming a whole grove",
+      "Bears small red figs eaten by birds and bats"
+    ],
+    "factsTa": [
+      "இந்தியாவின் தேசிய மரம்; காற்று வேர்கள் கீழே இறங்கி புதிய தோட்டுகளாகின்றன",
+      "ஒரு மரம் மிகப் பெரிய பரப்பைக் கவர்ந்து ஒரு காடு போல வளரும்",
+      "சிறு சிவப்புப் பல்லைகள் பறவைகளாலும் கொற்றைகளாலும் உண்படுகின்றன"
+    ],
+    "safetyNoteEn": "Milky sap can irritate skin — wash your hands after touching leaves.",
+    "safetyNoteTa": "வெள்ளை சாப்பு தோலைத் தொறுக்கலாம் — இலைகளைத் தொட்ட பின் கைகளைக் கழுவுங்கள்.",
+    "identifyingFeatures": [
+      "banyan tree with aerial roots hanging down",
+      "huge tree with many trunks",
+      "tree with very wide spreading canopy"
+    ]
+  },
+  {
+    "id": "palash",
+    "commonNameEn": "Palash (Flame of the Forest)",
+    "commonNameTa": "பளஷம் (கிண்பனி)",
+    "scientificName": "Butea monosperma",
+    "type": "plant",
+    "factsEn": [
+      "Called 'flame of the forest' for its brilliant orange-red flowers in spring",
+      "Leaves are large and made of three leaflets; traditionally used for leaf plates",
+      "A dry-season tree that loses its leaves before flowering"
+    ],
+    "factsTa": [
+      "வஸந்தகாலத்தில் காட்சியமான ஆரஞ்சு-சிவப்புப் பூக்கள் காரணமாக 'காட்டுப் பளஷம்' எனப்படும்",
+      "மூணு இலைகள் கொண்ட பெரிய இலை; இலைக் கடலைகளாகப் பயன்படுத்தப்படுகிறது",
+      "பூப்படும் முன் இலைகளை விழக்கும் வறண்ட கால மரம்"
+    ],
+    "safetyNoteEn": "Sap may stain clothes and irritate skin — handle with care.",
+    "safetyNoteTa": "சாப்பு உடைகளை மாசுபடுத்தவும் தோலைத் தொறுக்கவும் கூடுதல் — கவனத்தில் கொள்ளுங்கள்.",
+    "identifyingFeatures": [
+      "tree with bright orange red flowers",
+      "flame of the forest in bloom",
+      "tree with three leaflets"
+    ]
+  },
+  {
+    "id": "hibiscus",
+    "commonNameEn": "Hibiscus",
+    "commonNameTa": "செம்மல்லி",
+    "scientificName": "Hibiscus rosa-sinensis",
+    "type": "plant",
+    "factsEn": [
+      "Large trumpet-shaped flowers — usually red, but also pink, yellow or white — with a long central stamen",
+      "Common hedge shrub on campus; each flower lasts only a day",
+      "Red hibiscus is used in Tamil home rituals"
+    ],
+    "factsTa": [
+      "நீளமான மையக் கொண்ட பெரிய குடும்பிழுவை பூக்கள் — பொதுவாக சிவப்பு; இளஞ்சிவப்பு, மஞ்சள், வெள்ளை ஆகியவையும்",
+      "கல்லெட்டுகளாக அமைக்கப்படும் பொதுவான தாவரம்; ஒவ்வொரு பூக்கும் ஒரு நாள் மட்டும்",
+      "சிவப்பு செம்மல்லி தமிழ் வீட்டு வழிபாடுகளில் பயன்படுகிறது"
+    ],
+    "safetyNoteEn": "Not food — do not eat the flowers, even though they look bright and fresh.",
+    "safetyNoteTa": "உணவல்ல — பூக்களை உண்றதில்லை.",
+    "identifyingFeatures": [
+      "large red trumpet shaped flower",
+      "hibiscus flower with long central stamen",
+      "green shrub with big showy flowers"
+    ]
+  },
+  {
+    "id": "jasmine",
+    "commonNameEn": "Jasmine",
+    "commonNameTa": "மல்லிகை",
+    "scientificName": "Jasminum sambac",
+    "type": "plant",
+    "factsEn": [
+      "Small white star-shaped flowers with an intense sweet fragrance",
+      "The 'malligai' of Tamil poetry, strung into garlands for temples and hair",
+      "Grows as a vine or small shrub, common in campus gardens"
+    ],
+    "factsTa": [
+      "கடுமையான இனிப்புமணம் கொண்ட சிறு வெள்ளை நட்சத்திர வடிவப் பூக்கள்",
+      "தமிழ் கவிதையின் மல்லிகை; திருமணங்களிலும் மடியிலும் மணிக்கப்படுகிறது",
+      "தாவரமாகவோ சாலைக்குள்ளியாகவோ வளரும்; கல்லூரி தோட்டங்களில் பொதுவானது"
+    ],
+    "safetyNoteEn": "Some people are sensitive to strong fragrance — enjoy from a little distance.",
+    "safetyNoteTa": "சிலருக்கு கடுமையான மணத்திற்கு சுவராக்கம் — கட்சி தூரத்தில் ரசிக்குங்கள்.",
+    "identifyingFeatures": [
+      "small white star shaped flowers",
+      "jasmine vine with white fragrant flowers",
+      "cluster of tiny white flowers"
+    ]
+  },
+  {
+    "id": "banana",
+    "commonNameEn": "Banana",
+    "commonNameTa": "வாழை",
+    "scientificName": "Musa acuminata",
+    "type": "plant",
+    "factsEn": [
+      "Giant herb with broad green leaves; the 'tree' is really a pseudostem of leaf stalks",
+      "The flower (vazhaipoo) and the fruit are eaten widely across Tamil Nadu",
+      "Grows fast near water and in campus gardens"
+    ],
+    "factsTa": [
+      "அகலமான பச்சை இலைகள் கொண்ட பெரிய தாவரம்; 'மரம்' என்பது உண்மையில் இலைத் தண்டுகளின் கட்டி",
+      "வாழைப்பூ மற்றும் பழம் தமிழ்நாடு முழுவதும் உண்படுகின்றன",
+      "நீர்க்குள்ளாகவும் கல்லூரி தோட்டங்களிலும் விரைவாக வளர்கிறது"
+    ],
+    "safetyNoteEn": "No danger — wash the fruit before eating.",
+    "safetyNoteTa": "ஆபத்து இல்லை — பழத்தைக் கழுவி உண்க.",
+    "identifyingFeatures": [
+      "banana plant with huge broad green leaves",
+      "large leafed herb with pseudostem",
+      "hanging bunch of green or yellow bananas"
+    ]
+  },
+  {
+    "id": "coconut-palm",
+    "commonNameEn": "Coconut Palm",
+    "commonNameTa": "தேங்காய் மரம்",
+    "scientificName": "Cocos nucifera",
+    "type": "plant",
+    "factsEn": [
+      "Tall slender palm with a crown of feathery fronds and clusters of coconuts",
+      "Every part is used — water, copra, coir, and fronds for baskets",
+      "Lined along IIT Madras avenues; always watch for falling coconuts"
+    ],
+    "factsTa": [
+      "கொண்டையில் தேங்காய் குமிழ்கள் கொண்ட உயரமான சுவட்டிலான பனை; தலையில் காட்டைப் பறவை இலைகள்",
+      "தேங்காய் தணிர், கோப்ரா, நாரு, காட்டைகள் — எல்லாப் பகுதிகளும் பயன்படுத்தப்படுகின்றன",
+      "ஐஐடிஎம் நிலைப்பாலங்களில் நிறை நிற்கின்றன; தேங்காய் விழுவதைக் கவனுங்கள்"
+    ],
+    "safetyNoteEn": "Never stand under a palm when coconuts are ripe — falling fruit causes serious injury.",
+    "safetyNoteTa": "தேங்காய் பழிற்றிருக்கும் பனைக்கு அடியில் நிற்றாதேன் — விழும் பழம் கடுமையான சேதத்தை ஏற்படுத்தும்.",
+    "identifyingFeatures": [
+      "tall coconut palm with feathery fronds",
+      "palm tree with hanging coconuts",
+      "slender tall palm against the sky"
+    ]
+  },
+  {
+    "id": "bougainvillea",
+    "commonNameEn": "Bougainvillea",
+    "commonNameTa": "காகம்பூ",
+    "scientificName": "Bougainvillea spectabilis",
+    "type": "plant",
+    "factsEn": [
+      "Vigorous climber covered in papery bright bracts — magenta, purple or orange",
+      "The tiny white centre is the true flower; all the colour comes from the bracts",
+      "Campus walls and fences are often completely covered in bloom"
+    ],
+    "factsTa": [
+      "ஊதா, ஊதா, ஆரஞ்சு நிற காகித பூக்களால் மூடப்பட்ட வலுவான ஏறி வளரும் தாவரம்",
+      "சிறு வெள்ளை மையமே உண்மையான பூ; நிறம் அனைத்தும் காகித பூக்களிலிருந்து",
+      "கல்லூரி சுவர்களும் கட்டுகளும் முழுக்க பூக்களால் மூடப்பட்டிருக்கும்"
+    ],
+    "safetyNoteEn": "Sharp thorns — handle carefully; sap may irritate skin.",
+    "safetyNoteTa": "காத்துக்கள் — ஜல்லாதேன்; சாப்பு தோலைத் தொறுக்கலாம்.",
+    "identifyingFeatures": [
+      "bougainvillea with bright magenta papery bracts",
+      "climbing plant with purple or orange flowers",
+      "flowers covering a wall or fence"
+    ]
+  }
+]

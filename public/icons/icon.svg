@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#1b5e20"/>
+  <!-- stylized sunbird on a branch -->
+  <ellipse cx="210" cy="250" rx="95" ry="70" fill="#f9a825"/>
+  <circle cx="285" cy="185" r="42" fill="#f9a825"/>
+  <circle cx="298" cy="176" r="8" fill="#212a21"/>
+  <path d="M322 190 L368 200 L322 212 Z" fill="#ff8f00"/>
+  <path d="M150 220 Q90 180 105 130 Q150 160 175 200 Z" fill="#ffca28"/>
+  <path d="M205 300 Q260 330 330 318 L330 336 Q260 350 205 322 Z" fill="#33691e"/>
+  <rect x="120" y="330" width="290" height="14" rx="7" fill="#5d4037"/>
+  <path d="M330 318 Q400 300 430 260 Q380 300 330 336 Z" fill="#66bb6a"/>
+</svg>
