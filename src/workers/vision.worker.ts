@@ -9,14 +9,14 @@ let activeDevice: string = 'unknown';
 async function initClassifier(): Promise<void> {
   if (classifier) return;
 
-  // Try WebGPU first as specified in PLAN.md
   try {
-    self.postMessage({ type: 'status', message: 'Loading Vision AI...' });
+    self.postMessage({ type: 'status', message: 'Loading Vision AI (CLIP)...' });
     classifier = await pipeline(
       'zero-shot-image-classification',
       'Xenova/clip-vit-base-patch32',
       {
-        device: 'wasm' as any
+        device: 'wasm' as any,
+        dtype: 'q8' as any
       }
     );
     activeDevice = 'wasm';
