@@ -1,6 +1,6 @@
 import type { Species } from '../lib/pack-loader';
 import { loadSpecies } from '../lib/pack-loader';
-import { detectCapabilities, requestStoragePersistence } from '../lib/capabilities';
+import { requestStoragePersistence } from '../lib/capabilities';
 import { CacheManager } from '../lib/cache-manager';
 import { FieldLog } from '../screens/FieldLog';
 import { SpeciesCard, renderSpeciesCatalog } from '../screens/SpeciesCard';
@@ -1319,7 +1319,7 @@ export class App {
     // 3. Lazy init LLM worker on demand
     const llmWorker = await this.ensureLlmWorker();
     if (llmWorker) {
-      const systemPrompt = getSystemPrompt(this.species);
+      const systemPrompt = getSystemPrompt([this.selectedSpecies]);
       llmWorker.postMessage({
         type: 'generate',
         id: 'msg_' + Date.now(),
