@@ -63,3 +63,12 @@ export function formatBytes(bytes?: number): string {
   return gb.toFixed(1) + ' GB';
 }
 
+/** Detect if the device is mobile (touch + small screen or low memory). */
+export function isMobileDevice(): boolean {
+  const ua = navigator.userAgent;
+  const isMobileUA = /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+  const isSmallScreen = window.innerWidth < 768;
+  const lowMemory = (navigator as any).deviceMemory !== undefined && (navigator as any).deviceMemory <= 4;
+  return isMobileUA || isSmallScreen || lowMemory;
+}
+

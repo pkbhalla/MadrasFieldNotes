@@ -73,4 +73,24 @@ export class CacheManager {
     const keys = await caches.keys();
     await Promise.all(keys.map(k => caches.delete(k)));
   }
+
+  /** Clear only LLM model caches (Qwen/Gemma), keep vision (CLIP). */
+  async clearLlmCache(): Promise<void> {
+    if (!('caches' in window)) return;
+    try {
+      const cacheNames = await caches.keys();
+      for (const name of cacheNames) {
+        const cache = await caches.open(name);
+        const keys = await cache.keys();
+        for (const req of keys) {
+          const u = req.url.toLowerCase();
+          if (u.includes('qwen') || u.includes('gemma') || u.includes('smollm')) {
+            await cache.delete(req);
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('LLM cache clear failed', e);
+    }
+  }
 }

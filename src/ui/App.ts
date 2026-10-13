@@ -1,6 +1,6 @@
 import type { Species } from '../lib/pack-loader';
 import { loadSpecies } from '../lib/pack-loader';
-import { requestStoragePersistence } from '../lib/capabilities';
+import { requestStoragePersistence, isMobileDevice } from '../lib/capabilities';
 import { CacheManager } from '../lib/cache-manager';
 import { FieldLog } from '../screens/FieldLog';
 import { SpeciesCard, renderSpeciesCatalog } from '../screens/SpeciesCard';
@@ -50,6 +50,13 @@ export class App {
     await this.setupPWAStorage();
     this.setupOfflinePoller();
     // Workers initialized lazily
+    // Set backend label based on device
+    this.llmBackend = isMobileDevice() ? 'Field Notes (offline)' : 'loading';
+
+    // On mobile, clear bloated LLM cache from previous attempts
+    if (isMobileDevice()) {
+      CacheManager.getInstance().clearLlmCache().catch(() => {});
+    }
 
     // Check first load experience
     const hasSeenOnboarding = localStorage.getItem('mnf-seen-onboarding');
@@ -126,14 +133,15 @@ export class App {
   }
 
   private async ensureLlmWorker() {
+    // On mobile, skip LLM entirely — use pack-based answers to avoid OOM crash
+    if (isMobileDevice()) return null;
     if (this.llmWorker) return this.llmWorker;
     try {
       this.llmWorker = new Worker(new URL('../workers/llm.worker.ts', import.meta.url), { type: 'module' });
       this.llmWorker.onmessage = (e) => {
         this.handleLlmWorkerMessage(e.data);
       };
-      // Always prefer the mobile-safe config; worker also falls back
-      this.llmWorker.postMessage({ type: 'init', model: 'onnx-community/Qwen2.5-0.5B-Instruct' });
+      this.llmWorker.postMessage({ type: 'init' });
     } catch (e) {
       console.warn('LLM worker init failed', e);
     }
@@ -602,7 +610,9 @@ export class App {
           ${msgs.length === 0 ? `
             <div class="bubble-system">
               👋 Ask any question about ${this.selectedSpecies ? this.selectedSpecies.commonNameEn : 'this species'}.
-              Answers are generated locally from verified field notes with strict safety guardrails.
+              ${isMobileDevice()
+                ? 'Answers come directly from verified field notes — no AI download needed.'
+                : 'Answers are generated locally from verified field notes with strict safety guardrails.'}
             </div>
           ` : msgs.map(m => `
             <div class="chat-bubble ${m.role === 'user' ? 'bubble-user' : 'bubble-assistant'}">
@@ -634,7 +644,10 @@ export class App {
 
   private updateChatHeaderLive() {
     const el = document.getElementById('llm-model-badge');
-    if (el) el.textContent = `⚡ Local AI: ${this.llmBackend}`;
+    if (el) {
+      const label = isMobileDevice() ? 'Field Notes' : this.llmBackend;
+      el.textContent = `⚡ Local AI: ${label}`;
+    }
   }
 
   private renderChatMessages() {
