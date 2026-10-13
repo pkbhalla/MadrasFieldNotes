@@ -49,7 +49,7 @@ export class App {
     await this.setupCapabilities();
     await this.setupPWAStorage();
     this.setupOfflinePoller();
-    await this.setupWorkers();
+    // Workers initialized lazily
 
     // Check first load experience
     const hasSeenOnboarding = localStorage.getItem('mnf-seen-onboarding');
@@ -111,8 +111,8 @@ export class App {
     update();
   }
 
-  private async setupWorkers() {
-    // 1. Vision Worker setup
+  private async ensureVisionWorker() {
+    if (this.visionWorker) return this.visionWorker;
     try {
       this.visionWorker = new Worker(new URL('../workers/vision.worker.ts', import.meta.url), { type: 'module' });
       this.visionWorker.onmessage = (e) => {
@@ -122,20 +122,23 @@ export class App {
     } catch (e) {
       console.warn('Vision worker init failed', e);
     }
+    return this.visionWorker;
+  }
 
-    // 2. LLM Worker setup
+  private async ensureLlmWorker() {
+    if (this.llmWorker) return this.llmWorker;
     try {
       this.llmWorker = new Worker(new URL('../workers/llm.worker.ts', import.meta.url), { type: 'module' });
       this.llmWorker.onmessage = (e) => {
         this.handleLlmWorkerMessage(e.data);
       };
-      
       const caps = await detectCapabilities();
       const preferredModel = caps.hasWebGPU ? 'onnx-community/gemma-3-1b-it-ONNX' : 'onnx-community/Qwen2.5-0.5B-Instruct';
       this.llmWorker.postMessage({ type: 'init', model: preferredModel });
     } catch (e) {
       console.warn('LLM worker init failed', e);
     }
+    return this.llmWorker;
   }
 
   private handleVisionWorkerMessage(data: any) {
@@ -1243,12 +1246,13 @@ export class App {
       img.crossOrigin = 'anonymous';
       img.onload = () => {
         const canvas = document.createElement('canvas');
-        canvas.width = 400;
-        canvas.height = 400;
+        const target = 224;
+        canvas.width = target;
+        canvas.height = target;
         const ctx = canvas.getContext('2d');
         if (ctx) {
-          ctx.drawImage(img, 0, 0, 400, 400);
-          const dataUrl = canvas.toDataURL('image/png');
+          ctx.drawImage(img, 0, 0, target, target);
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
           this.currentImagePreview = dataUrl;
           this.runVisionClassification(dataUrl);
         }
@@ -1265,9 +1269,12 @@ export class App {
     }
   }
 
-  private runVisionClassification(dataUrl: string) {
-    if (!this.visionWorker) {
-      this.showToast('Vision AI worker initializing, please retry.');
+  private async runVisionClassification(dataUrl: string) {
+    const worker = await this.ensureVisionWorker();
+    if (!worker) {
+      this.showToast('Vision AI failed to load. Try again.');
+      this.isAnalyzing = false;
+      this.render();
       return;
     }
 
@@ -1279,7 +1286,7 @@ export class App {
 
     const candidateLabels = buildCandidateLabels(this.species);
 
-    this.visionWorker.postMessage({
+    worker.postMessage({
       type: 'classify',
       image: dataUrl,
       labels: candidateLabels,
@@ -1310,10 +1317,11 @@ export class App {
       return;
     }
 
-    // 3. Check if LLM worker is ready
-    if (this.llmWorker) {
+    // 3. Lazy init LLM worker on demand
+    const llmWorker = await this.ensureLlmWorker();
+    if (llmWorker) {
       const systemPrompt = getSystemPrompt(this.species);
-      this.llmWorker.postMessage({
+      llmWorker.postMessage({
         type: 'generate',
         id: 'msg_' + Date.now(),
         messages: [
