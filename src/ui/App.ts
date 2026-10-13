@@ -132,9 +132,8 @@ export class App {
       this.llmWorker.onmessage = (e) => {
         this.handleLlmWorkerMessage(e.data);
       };
-      const caps = await detectCapabilities();
-      const preferredModel = caps.hasWebGPU ? 'onnx-community/gemma-3-1b-it-ONNX' : 'onnx-community/Qwen2.5-0.5B-Instruct';
-      this.llmWorker.postMessage({ type: 'init', model: preferredModel });
+      // Always prefer the mobile-safe config; worker also falls back
+      this.llmWorker.postMessage({ type: 'init', model: 'onnx-community/Qwen2.5-0.5B-Instruct' });
     } catch (e) {
       console.warn('LLM worker init failed', e);
     }
